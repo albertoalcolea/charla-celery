@@ -51,6 +51,11 @@ Uso
     python manage.py runserver
 
 
+Notas
+-----
+Es necesario actualizar MEDIA_ROOT en proj/settings.py por un directorio válido.
+
+
 Autor
 -----
 Alberto Alcolea ([@albertoalcolea](https://twitter.com/albertoalcolea))
