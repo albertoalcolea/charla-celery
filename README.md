@@ -42,6 +42,14 @@ Uso
 
     celery flower --broker='redis://'
 
+###Crear tablas en la base de datos a partir de los modelos de django
+
+    python manage.py syncdb
+
+###Lanzar el servidor web de desarrollo de django
+
+    python manage.py runserver
+
 
 Autor
 -----
