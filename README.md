@@ -36,11 +36,11 @@ Uso
 ---
 ###Lanzar un worker
 
-   celery worker -A nombre_modulo --loglevel=info
+    celery worker -A nombre_modulo --loglevel=info
 
 ###Monitorizar estado con flower
 
-   celery flower --broker='redis://'
+    celery flower --broker='redis://'
 
 
 Autor
