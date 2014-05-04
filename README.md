@@ -15,30 +15,30 @@ Está dividida en dos partes:
 
 Instalar dependencias
 ---------------------
- * Celery usando redis como broker
+###Celery usando redis como broker
 
     pip install celery[redis]
 
- * Django
+###Django
 
     pip install django
 
- * Pillow para realizar el filtro sepia
+###Pillow para realizar el filtro sepia
 
     pip install pillow
 
- * Flower para monitorizar el estado del broker y los workers. [Opcional]
+###Flower para monitorizar el estado del broker y los workers. [Opcional]
 
     pip install flower
 
 
 Uso
 ---
- * Lanzar un worker
+###Lanzar un worker
 
    celery worker -A nombre_modulo --loglevel=info
 
- * Monitorizar estado con flower
+###Monitorizar estado con flower
 
    celery flower --broker='redis://'
 
