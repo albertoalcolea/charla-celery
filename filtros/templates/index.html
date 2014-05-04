@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Filtros</title>
+	<style>
+		.foto {
+			display: inline-block;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<section id="fotoform">
+		<h4>Sube tu foto</h4>
+		<form action="{% url 'filtros:send' %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Enviar" />
+		</form>
+	</section>
+	<section id="fotolist">
+		{% for foto in fotos %}
+			<div class="foto">
+				<h5>{{ foto.titulo }}</h5>
+				{% if not foto.ready %}
+					<p>Foto cargandose</p>
+				{% else %}
+					<img src="{{ foto.url }}" style='max-height: 100px; max-width: 100px' />
+				{% endif %}
+			</div>
+		{% endfor %}
+	</section>
+</body>
+</html>
