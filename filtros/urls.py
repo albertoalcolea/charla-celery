@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.urls import path
 
-from filtros import views
+from . import views
 
+app_name = 'filtros'
 urlpatterns = [
-	url(r'^$', views.index, name='index'),
-	url(r'^send/$', views.send, name='send'),
+	path('', views.index, name='index'),
+	path('send/', views.send, name='send'),
 ]

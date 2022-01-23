@@ -20,7 +20,7 @@ def make_linear_ramp(white):
 	ramp = []
 	r, g, b = white
 	for i in range(255):
-		ramp.extend((r*i/255, g*i/255, b*i/255))
+		ramp.extend((int(r*i/255), int(g*i/255), int(b*i/255)))
 	return ramp
 
 def apply_sepia_filter(image):
